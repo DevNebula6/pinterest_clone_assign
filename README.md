@@ -4,6 +4,14 @@ A pixel-perfect Pinterest clone built with Flutter that closely replicates the r
 
 ---
 
+## Download APK
+
+> **[Download latest release APK](https://drive.google.com/file/d/1rkDO7Xh_t7uA0Pn8u-gtqR4zZfeCnA5b/view?usp=drive_link)**
+>
+> Built with `flutter build apk --release`. Install on any Android device (enable "Install from unknown sources" if prompted).
+
+---
+
 ## Table of Contents
 
 1. [Screens and Features](#screens-and-features)
