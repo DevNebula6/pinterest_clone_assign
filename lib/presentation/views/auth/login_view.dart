@@ -292,29 +292,6 @@ class _LoginViewState extends ConsumerState<LoginView> {
                   ),
                   const SizedBox(height: 20),
 
-                  // Facebook notice
-                  RichText(
-                    textAlign: TextAlign.center,
-                    text: const TextSpan(
-                      style: TextStyle(
-                        color: AppColors.textPrimary,
-                        fontSize: 14,
-                        height: 1.5,
-                      ),
-                      children: [
-                        TextSpan(
-                            text:
-                                'Facebook login is no longer available.\n'),
-                        TextSpan(
-                          text: 'Recover your account',
-                          style:
-                              TextStyle(fontWeight: FontWeight.w700),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 24),
-
                   // Terms footer
                   RichText(
                     textAlign: TextAlign.center,
