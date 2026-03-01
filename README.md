@@ -372,24 +372,3 @@ flutter analyze
 | Safe area | SafeArea widgets throughout | Same |
 
 ---
-
-## Design Decisions
-
-**Why Riverpod over BLoC or Provider?**
-Riverpod removes the BuildContext dependency for state access, makes testing easier (override providers in tests), and the `AsyncNotifier` pattern fits perfectly for API-driven screens with loading/error/data states.
-
-**Why GoRouter?**
-GoRouter is the Flutter team recommended solution and has first-class support for ShellRoutes (needed for the persistent bottom nav bar) and redirect guards (needed for the auth flow). Deep linking also works out of the box.
-
-**Why fpdart Either for errors?**
-Rather than try/catch scattered everywhere, repository methods return `Either<AppError, T>`. Callers use `result.fold(onLeft: handleError, onRight: useData)`. This makes error paths explicit and impossible to accidentally ignore.
-
-**Why 2-step login (landing + password screen)?**
-This mirrors exactly how the real Pinterest app works - the landing screen lets you choose Google or email without committing to a form, keeping the entry experience clean.
-
-**Why a floating blur bottom bar?**
-The real Pinterest app uses a translucent bottom navigation bar that floats over the content. The `ClipRRect` + `BackdropFilter` approach replicates this exactly and lets the masonry grid scroll all the way to the bottom edge.
-
----
-
-*Built as a Flutter assignment. 12 screens, clean architecture, real Pexels photos, Clerk auth.*
